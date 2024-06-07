@@ -1,0 +1,298 @@
+/* GLOBAL */
+
+* {
+    box-sizing: border-box;
+}
+
+/* LAYOUT */
+
+body {
+    display: grid;
+    grid: min-content / repeat(8, 1fr);
+    column-gap: 2em;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: repeat(3, min-content);
+    grid-column: 1 / -1;
+    background-color: rgba(61,224,126,255);
+    row-gap: 6em;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 2 / -2;
+    row-gap: 1em;
+}
+
+.main-card {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 100%;
+    align-content: space-between;
+}
+
+.main-card-big {
+    grid-column: span 3;
+}
+
+.main-card img, .main-card-big img {
+    width: 100%;
+}
+
+.footer {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: subgrid;
+    height: 25vh;
+}
+
+.footer-nav {
+    grid-column: 2 / 4;
+}
+
+.footer-address {
+    grid-column: 4 / 6;
+}
+
+.footer-social {
+    grid-column: 6 / 8;
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3 {
+    font-family: "Roboto", sans-serif;
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    color: rgba(32,33,35,255);
+}
+
+h3, h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+p, a {
+    font-family: "Fira Sans", sans-serif;
+    font-size: 0.8rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+p, h3, h2, a{
+    color: white;
+}
+
+/* COMPONENTS */
+
+html {
+    background-color: black;
+}
+
+/* COMPONENTS - Header*/
+.header-img__nav {
+    position: absolute;
+    padding: 1em 0 0 1em;
+}
+
+.header__header {
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.header-img__ninja {
+    grid-column: 4 / -4;
+    justify-self:center;
+    max-width: 100%; 
+    grid-row: 3 / 4;
+}
+
+/* COMPONENTS - Main*/
+
+.main {
+    margin: 3em 0 7em 0;
+    row-gap: 5em;
+}
+
+.main-card {
+    max-width: 100%;
+}
+
+.main-card__header {
+    margin: 0.5em 0;
+}
+
+.main-card__button {
+    background-color: rgba(232,63,87,255);
+    padding: 0.6em 1em;
+    border-radius: 0.3em;
+    justify-self: start;
+    margin-top: 3em;
+}
+
+.main-card-big {
+    background-color: white;
+}
+
+.main-card-big h3, .main-card-big p{
+    color: black;
+    padding-left: 1rem;
+}
+
+.main-card-big a {
+    margin: 3rem 0 1rem 1rem;
+}
+
+@media screen and (max-width: 850px){
+    .main-card {
+        grid-column: span 3;
+    }
+
+    .main-card-big {
+        grid-column: span 6;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .main-card {
+        grid-column: 2 / 6;
+    }
+
+    .main-card-big {
+        grid-column: span 6;
+    }
+}
+
+/* COMPONENTS - Footer*/
+
+.footer {
+    background-color: rgba(51,51,51,255);
+}
+
+.footer > *  {
+    margin-top: 3em;
+}
+
+.footer-nav *, .footer-address * {
+    display: block;
+}
+
+.footer h2 {
+    margin-bottom: 0.6em;
+}
+
+.footer a, .footer p {
+    margin-top: 0.5rem;
+}
+
+.footer-social-logos figure{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 0.3em;
+}
+
+.footer-social-logos img {
+    width: 100%;
+}
+
+@media screen and (max-width: 400px){
+    .footer > * {
+        grid-column: 1 / -1;
+        margin-top: 0;
+    }
+
+    .footer {
+        height: 150%;
+        justify-items: center;
+        align-content: space-evenly;
+        row-gap: 0.5em;
+    }
+
+    .footer-address, .footer-social {
+        margin-top: 0;
+    }
+}
+
+/* COMPONENTS - Checkout*/
+
+.checkout-table {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 1 / -1;
+    row-gap: 0.7em;
+    margin-top: 2em;
+}
+
+.checkout-header {
+    grid-column: 1 / -1;
+    font-size: 2em;
+}
+
+.main-card-checkout a{
+    font-size: 1rem;
+    margin:  1em;
+}
+
+.checkout-table-row__header {
+    background-color: rgba(47,11,11,255);
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 1 / -1;
+    padding: 0.3em 0;
+}
+
+.checkout-table-row__data {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 1 / -1;
+}
+
+.checkout-table-row__data p {
+    font-size: 1.1em;
+}
+
+.checkout-table-row__line {
+    grid-column: 1 / -1;
+    border: 1px solid gray;
+    border-radius: 50%;
+}
+
+.checkout-table-text__left {
+    grid-column: 1 / 3;
+}
+
+.checkout-table-text__middle {
+    grid-column: 4;
+}
+
+.checkout-table-text__right {
+    grid-column: 6;
+}
+
+.checkout-table-row__total {
+    font-weight: 700;
+}
+
+.checkout-button {
+    grid-column: 1 / -1;
+    justify-self: end;
+    font-size: 1.1rem;
+    border-radius: 0.1rem;
+    font-weight: 500;
+    margin-top: 4em;
+}
+
+.checkout {
+    margin: 6em 0;
+    row-gap: 1em;
+}

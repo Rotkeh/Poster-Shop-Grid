@@ -3,9 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
   <title>Poster Shop Checkout</title>
 </head>
 <body>
-  
+  <header class="header">
+    <figure class="header-img__nav"><img src="assets/navicon.svg" alt=""></figure>
+    <h1 class="header__header">Checkout</h1>
+    <img class="header-img__ninja" src="assets/ninjahead.svg" alt="">
+  </header>
+  <main class="main checkout">
+    <h2 class="checkout-header">Varor i korg</h2>
+    <section class="main-card main-card-big main-card-checkout">
+      <img src="assets/char-7.png" alt="">
+      <h3 class="main-card__header">Fotograf</h3>
+      <a class="main-card__button" href="index.html">Oh, take my money!</a>
+    </section>
+    <section class="main-card main-card-big main-card-checkout">
+      <img src="assets/char-9.png" alt="">
+      <h3 class="main-card__header">Personlig tränare</h3>
+      <a class="main-card__button" href="index.html">Oh, take my money!</a>
+    </section>
+    <section class="checkout-table">
+      <section class="checkout-table-row__header">
+        <p class="checkout-table-text__left">Vara</p>
+        <p class="checkout-table-text__middle">Antal</p>
+        <p class="checkout-table-text__right">Pris</p>
+      </section>
+      <section class="checkout-table-row__data">
+        <p class="checkout-table-text__left">Poster Fotograf</p>
+        <p class="checkout-table-text__middle">1</p>
+        <p class="checkout-table-text__right">179 sek</p>
+      </section>
+      <section class="checkout-table-row__data">
+        <p class="checkout-table-text__left">Poster Crossfit</p>
+        <p class="checkout-table-text__middle">1</p>
+        <p class="checkout-table-text__right">179 sek</p>
+      </section>
+      <span class="checkout-table-row__line"></span>
+      <section class="checkout-table-row__data checkout-table-row__total">
+        <p class="checkout-table-text__left">Totalt</p>
+        <p class="checkout-table-text__middle"></p>
+        <p class="checkout-table-text__right">358 sek</p>
+      </section>
+    </section>
+    <a class="main-card__button checkout-button" href="">Gimmie gimmie gimmie!</a>
+  </main>
+  <footer class="footer">
+    <nav class="footer-nav">
+      <h2 class="footer-nav__header">Nav</h2>
+      <a class="footer-nav__button" href="">Products</a>
+      <a class="footer-nav__button" href="">About Us</a>
+      <a class="footer-nav__button" href="">Contact</a>
+    </nav>
+    <address class="footer-address">
+      <h2 class="footer-address__header">Address</h2>
+      <p class="footer-address__text">Plinkeplonkvägen 32</p>
+      <p class="footer-address__text">888 81 Klonkberga</p>
+    </address>
+    <section class="footer-social">
+      <h2 class="footer-social__header">Social media</h2>
+      <section class="footer-social-logos">
+        <figure><img src="assets/logo-twitter.svg" alt=""></figure>
+        <figure><img src="assets/logo-facebook.svg" alt=""></figure>
+        <figure><img src="assets/logo-linkedin.svg" alt=""></figure>
+        <figure><img src="assets/logo-instagram.svg" alt=""></figure>
+      </section>
+    </section>
+  </footer>
 </body>
 </html>
